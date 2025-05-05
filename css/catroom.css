@@ -1,43 +1,26 @@
-.catroom {
-	max-width: 1080px;
-	margin: 0 auto;
-}
-.catroom {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-.catroom .catroom_header {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-.tabs {
-	display: flex;
-	cursor: pointer;
-}
+/* 공통 */
+.catroom {max-width: 1080px;height: 100%;margin: 0 auto;overflow: hidden;border: 1px solid #ddd;}
+img {width: 100%;height: 100%;}
+/* 헤더 */
+.catroom .catroom_header {width: 100%;height: 80px;display: flex;align-items: center;padding: 0 20px; overflow: hidden;background: #F6F8F9;border-bottom: 1px solid #F1F3F4;}
+.catroom .catroom_header h1 {font-size: 28px;font-weight: bold;color: #333;text-align: center;}
+/* 고양이 아바타 */
+.catroom_visual {width: 100%;min-height: 370px;display: flex;align-items: center;justify-content: center;}
+.catroom_visual_area {position: relative;width: 300px;height: 300px;border: 1px solid #ddd;border-radius: 10px;}
+.catroom_visual_area .visual_face {position: absolute;top: 50%;left: 50%;width: 300px;height: 300px;transform: translate(-50%, -50%);}
+.catroom_visual_area .visual_eyes {position: absolute;top: 50%;left: 50%;width: 300px;height: 300px;transform: translate(-50%, -50%);}
 
-.tab {
-	padding: 10px 20px;
-	border: 1px solid #ccc;
-	border-bottom: none;
-	background: #f1f1f1;
-	margin-right: 5px;
-}
+@media only screen and (max-width: 1080px) {
+	body {
+	  background-color: lightblue;
+	}
+  }
 
-.tab.active {
-	background: #fff;
-	font-weight: bold;
-	border-top: 2px solid #007BFF;
-}
 
-.tab-content {
-	border: 1px solid #ccc;
-	padding: 20px;
-	background: #fff;
-	display: none;
-}
 
-.tab-content.active {
-	display: block;
-}
+/* 탭 */
+.tabs {display: flex;cursor: pointer;}
+.tab {padding: 10px 20px;border: 1px solid #ccc;border-bottom: none;background: #f1f1f1;margin-right: 5px;}
+.tab.active {background: #fff;font-weight: bold;border-top: 2px solid #007BFF;}
+.tab_content {border: 1px solid #ccc;padding: 20px;background: #fff;display: none;}
+.tab_content.active {display: block;}
