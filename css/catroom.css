@@ -1,14 +1,172 @@
 /* 공통 */
-.catroom {max-width: 1080px;height: 100%;margin: 0 auto;overflow: hidden;border: 1px solid #ddd;}
+.catroom {position: relative;max-width: 1080px;height: 100%;margin: 0 auto;overflow: hidden;border: 1px solid #ddd;}
 img {width: 100%;height: 100%;}
+button {background: unset;border: unset;cursor: pointer;}
+:root {
+	--main-color: #56E8AB;
+	--sub-color: #3ECF92;
+	/* --text-color: #343A40;
+	--background-color: #F8F9FA;
+	--border-color: #CED4DA;
+	--hover-color: #E9ECEF;
+	--active-color: #007BFF; */
+}
 /* 헤더 */
-.catroom .catroom_header {width: 100%;height: 80px;display: flex;align-items: center;padding: 0 20px; overflow: hidden;background: #F6F8F9;border-bottom: 1px solid #F1F3F4;}
-.catroom .catroom_header h1 {font-size: 28px;font-weight: bold;color: #333;text-align: center;}
+.catroom .catroom_header {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 20px; 
+	overflow: hidden;
+	background: #F6F8F9;
+	border-bottom: 1px solid #ddd;
+}
+.catroom .catroom_header h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	/* background-color: var(--main-color); */
+}
+/* 고양이 선택 버튼 */
+.catroom_btns {
+	position: absolute;
+	right: 20px;
+	top: 360px;
+	display: flex;
+	gap: 10px;
+}
+.catroom_btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}	
+.catroom_btns .btn.info {
+	min-width: 30px;
+	height: 30px;
+	background: #fff;
+	color: #333;
+	border-radius: 50%;
+	font-weight: bold;
+	color: #666;
+	border: 1px solid #ddd;
+}
+.catroom_btns .btn.buzzer {
+	min-width: 100px;
+	height: 40px;
+	background: #fff;
+	color: #333;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 18px;
+	border: 1px solid #ddd;
+}
+.catroom_btns .btn.buzzer:hover {
+	background: var(--main-color);
+	color: #fff;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+}
+
+.catroom_btns .btn.buzzer .count {
+	display: inline-block;
+	min-width: 20px;
+	height: 20px;
+	background: #fff;
+	color: #333;
+	border-radius: 50%;
+	color: #333;
+	border: 1px solid #ddd;
+}
+
 /* 고양이 아바타 */
-.catroom_visual {width: 100%;min-height: 370px;display: flex;align-items: center;justify-content: center;}
-.catroom_visual_area {position: relative;width: 300px;height: 300px;border: 1px solid #ddd;border-radius: 10px;}
-.catroom_visual_area .visual_face {position: absolute;top: 50%;left: 50%;width: 300px;height: 300px;transform: translate(-50%, -50%);}
-.catroom_visual_area .visual_eyes {position: absolute;top: 50%;left: 50%;width: 300px;height: 300px;transform: translate(-50%, -50%);}
+.catroom_visual {
+	width: 100%;
+	min-height: 370px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.catroom_visual_area {
+	position: relative;
+	overflow: hidden; 
+	width: 300px;
+	height: 300px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+.catroom_visual_area .visual_face {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 300px;
+	transform: translate(-50%, -50%);
+	cursor: grab;
+}
+.catroom_visual_area .visual_eyes {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 300px;
+	transform: translate(-50%, -50%);
+	/* cursor: grab; */
+}
+.catroom_visual_area .visual_noise {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 300px;
+	transform: translate(-50%, -50%);
+	/* cursor: grab; */
+}
+.catroom_content {
+	width: 100%;
+	height: 100%;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: #F6F8F9;
+}  
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 1080px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-top: 1px solid #ddd;
+}
+.footer_btns .btn {
+	width: 200px;
+	height: 40px;
+	margin: 0 10px;
+	background: var(--main-color);
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.footer_btns .btn.reset {
+	background: #fff;
+	border: 1px solid #ddd;
+	color: #333;
+}
+
 
 @media only screen and (max-width: 1080px) {
 	body {
