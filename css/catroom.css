@@ -71,7 +71,6 @@ button {background: unset;border: unset;cursor: pointer;}
 	font-size: 18px;
 	border: none;
 }
-
 .catroom_btns .btn.buzzer .count {
 	display: inline-block;
 	min-width: 20px;
@@ -81,8 +80,8 @@ button {background: unset;border: unset;cursor: pointer;}
 	border-radius: 50%;
 	color: #333;
 	border: 1px solid #ddd;
+	font-weight: bold;
 }
-
 /* 고양이 아바타 */
 .catroom_visual {
 	width: 100%;
@@ -193,11 +192,49 @@ button {background: unset;border: unset;cursor: pointer;}
 	border-radius: 7px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.catroom_content .tab_content_area .box.on {
+.catroom_content .tab_content_area .box.active {
 	border: 2px solid var(--main-color);
 }
+/* 딤 레이어 */
+.dim_layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	z-index: 9999;
+}
+.dim_layer.active {
+	display: block;
+}
+.dim_layer .dim_layer_content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 300px;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.dim_layer .dim_layer_content p:nth-child(1) {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.dim_layer .dim_layer_content p:nth-child(2) {
+	font-size: 25px;
+}
+.dim_layer .dim_layer_content p span {
+	font-size: 52px;
+}
 
-
+/* 푸터 */
 .footer {
 	position: fixed;
 	bottom: 0;
@@ -211,6 +248,9 @@ button {background: unset;border: unset;cursor: pointer;}
 	background: #fff;
 	border-top: 1px solid #ddd;
 }
+
+
+
 .footer_btns .btn {
 	width: 200px;
 	height: 40px;
@@ -221,6 +261,8 @@ button {background: unset;border: unset;cursor: pointer;}
 	border-radius: 30px;
 	cursor: pointer;
 }
+
+
 .footer_btns .btn.reset {
 	background: #fff;
 	border: 1px solid #ddd;

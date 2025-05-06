@@ -7,7 +7,7 @@
 
 	<!-- 피그마 -->
 	<!-- 
-	https://www.figma.com/design/C6ef8VHdZGd1Git6Kg4s41/kkamnyang?node-id=0-1&p=f&t=H2zlYM6S1J94MN9t-0 
+		https://www.figma.com/design/C6ef8VHdZGd1Git6Kg4s41/kkamnyang?node-id=0-1&p=f&t=H2zlYM6S1J94MN9t-0 
 	-->
 	<!-- styles -->
 	<link rel="stylesheet" href="./css/reset.css" />
@@ -25,7 +25,7 @@
 				<button class="btn info" id="btn_info">!</button>
 				<!-- <div>내용</div> -->
 			</div>
-			<button class="btn buzzer" id="btn_buzzer">뽑기 <span class="count">3</span></button>
+			<button class="btn buzzer" id="btnBuzzer">뽑기 <span class="count">3</span></button>
 		</div>
 
 		<article class="catroom_visual">
@@ -47,7 +47,7 @@
 		
 			<div class="tab_content active" data-content="1">
 				<div class="tab_content_area">
-					<button class="box on"><img src="./img/img_face1.png" alt="face1" /></button>
+					<button class="box active"><img src="./img/img_face1.png" alt="face1" /></button>
 					<button class="box">2</button>
 					<button class="box">3</button>
 					<button class="box">4</button>
@@ -76,6 +76,14 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- 시간초 뽑기 딤 레이어 -->
+	<div class="dim_layer " id="dimLayer">
+		<div class="dim_layer_content">
+			<p>뽑기 시작!</p>
+			<p><span class="count">3</span>초</p>
+		</div>
+	</div>
 
 	<!-- js -->
 	<script src="./js/catroom.js"></script>
