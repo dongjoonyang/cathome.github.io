@@ -127,17 +127,77 @@ button {background: unset;border: unset;cursor: pointer;}
 	transform: translate(-50%, -50%);
 	/* cursor: grab; */
 }
+/* 탭 */
+.catroom_content .tabs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.catroom_content .tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	padding: 10px 20px;
+	border: 1px solid #ABABAB;
+	background: #fff;
+	margin-left: -1px;
+	min-width: 60px;
+	height: 22px;
+}
+.catroom_content .tab.active {
+	background: #56E8AB;
+	font-weight: bold;
+	border: 1px solid #3ECF92;
+	color: #fff;
+}
+.catroom_content .tab:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+.catroom_content .tab:nth-child(4) {
+	border-radius: 0 5px 5px 0;
+}
+.catroom_content .tab_content {
+	min-height: 300px;
+	max-height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+	margin-top: 30px;
+	margin-bottom: 90px;
+}
+.catroom_content .tab_content.active {
+	display: block;
+}
 .catroom_content {
-	width: 100%;
 	height: 100%;
 	min-height: 400px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	padding: 20px;
 	background: #F6F8F9;
-}  
+}
+.catroom_content .tab_content_area{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 10px;
+	gap: 30px;
+}
+.catroom_content .tab_content_area .box {
+	width: 180px;
+	height: 180px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	border-radius: 7px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.catroom_content .tab_content_area .box.on {
+	border: 2px solid var(--main-color);
+}
+
+
 .footer {
 	position: fixed;
 	bottom: 0;
@@ -176,9 +236,3 @@ button {background: unset;border: unset;cursor: pointer;}
 
 
 
-/* 탭 */
-.tabs {display: flex;cursor: pointer;}
-.tab {padding: 10px 20px;border: 1px solid #ccc;border-bottom: none;background: #f1f1f1;margin-right: 5px;}
-.tab.active {background: #fff;font-weight: bold;border-top: 2px solid #007BFF;}
-.tab_content {border: 1px solid #ccc;padding: 20px;background: #fff;display: none;}
-.tab_content.active {display: block;}

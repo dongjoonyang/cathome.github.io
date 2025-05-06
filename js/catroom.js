@@ -2,7 +2,7 @@ const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.tab_content');
 
 tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+  tab.addEventListener('click', () => {
     const target = tab.getAttribute('data-tab');
 
     tabs.forEach(t => t.classList.remove('active'));
@@ -14,5 +14,5 @@ tabs.forEach(tab => {
         c.classList.add('active');
         }
     });
-    });
+  });
 });
